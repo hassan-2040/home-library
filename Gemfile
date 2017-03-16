@@ -43,3 +43,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #rspec gem
 gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+
+#factory girl
+gem 'factory_girl_rails', '~> 4.8'
+
+#active model serializers
+gem 'active_model_serializers', '~> 0.10.5'
+
+gem 'rails-controller-testing', '~> 1.0', '>= 1.0.1'
+
+#database cleaner
+gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
