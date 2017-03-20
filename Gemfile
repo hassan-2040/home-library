@@ -54,3 +54,10 @@ gem 'rails-controller-testing', '~> 1.0', '>= 1.0.1'
 
 #database cleaner
 gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+
+#user generation
+gem 'devise_token_auth', '~> 0.1.40'
+
+#fb logins
+gem 'omniauth', '~> 1.6', '>= 1.6.1'
+
