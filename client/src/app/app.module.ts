@@ -13,7 +13,8 @@ import { NewUserComponent } from './new-user/new-user.component';
   declarations: [
     AppComponent,
     BookListComponent,
-    NewUserComponent
+    NewUserComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
