@@ -11,13 +11,20 @@ import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { NewUserFormComponent } from './new-user-form/new-user-form.component';
+import { NewUserSessionComponent } from './new-user-session/new-user-session.component';
+import { UserService } from './user.service';
+import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './auth-guard';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     NewUserComponent,
-    NewUserFormComponent
+    NewUserFormComponent,
+    NewUserSessionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,7 @@ import { NewUserFormComponent } from './new-user-form/new-user-form.component';
     HttpModule,
     HomeLibraryRoutingModule
   ],
-  providers: [Angular2TokenService],
+  providers: [Angular2TokenService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Angular2TokenService } from 'angular2-token';
+import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
 	selector: 'app-new-user-form',
 	templateUrl: './new-user-form.component.html',
-	styleUrls: ['./new-user-form.component.css']
+	styleUrls: ['./new-user-form.component.css'],
+  providers: [UserService]
 })
 
 
@@ -13,17 +14,13 @@ export class NewUserFormComponent implements OnInit {
 
 	model = new User('','','');
 
-	constructor(private _tokenService: Angular2TokenService) {
-			this._tokenService.init({
-			registerAccountPath: '/api/auth'
-		});
-	}
+	constructor(private userService: UserService) {}
 
 	ngOnInit() {
 	}
 
 	register() {
-		this._tokenService.registerAccount({
+		this.userService.registerAccount({
 			email: 				  this.model.email,
 			password: 			  this.model.password,
 			passwordConfirmation: this.model.password
