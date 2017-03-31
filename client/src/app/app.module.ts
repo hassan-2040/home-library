@@ -10,6 +10,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { BookService } from './book.service';
 import { BookFormComponent } from './book-form/book-form.component';
+import { NewBookComponent } from './new-book/new-book.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BookFormComponent } from './book-form/book-form.component';
     AppComponent,
     BookListComponent,
     NewUserComponent,
-    BookFormComponent
+    BookFormComponent,
+    NewBookComponent
   ],
   imports: [
     BrowserModule,
