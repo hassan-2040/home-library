@@ -8,6 +8,8 @@ import { HomeLibraryRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { NewUserComponent } from './new-user/new-user.component';
+import { BookService } from './book.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { NewUserComponent } from './new-user/new-user.component';
     HttpModule,
     HomeLibraryRoutingModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

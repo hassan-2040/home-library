@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-
+import { BookService } from '../book.service';
 
 
 @Component({
@@ -8,13 +7,15 @@ import { Http } from '@angular/http';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css']
 })
+
 export class BookListComponent implements OnInit {
   books: any;
-  constructor(private http: Http) { }
+
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
-    this.http.get('./api/books.json')
-      .subscribe(response => this.books = response.json())
+    this.bookService.getList()
+      .subscribe(response => this.books = response.json());
   }
 
 }
