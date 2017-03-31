@@ -12,4 +12,8 @@ export class BookFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    alert("submitted");
+  }
+
 }
