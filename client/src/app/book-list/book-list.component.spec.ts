@@ -6,6 +6,7 @@ import { BookService } from '../book.service';
 import { BookFormComponent } from '../book-form/book-form.component';
 import { BookListComponent } from './book-list.component';
 import { MockBookService } from '../../testing/mock-book.service';
+import { MockBookFormComponent } from '../../testing/mock-book-form.component';
 
 
 describe('BookListComponent', () => {
@@ -15,7 +16,7 @@ describe('BookListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookListComponent, BookFormComponent ]
+      declarations: [ BookListComponent, MockBookFormComponent ]
     })
       .overrideComponent(BookListComponent, {
         set: {

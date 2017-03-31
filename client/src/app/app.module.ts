@@ -17,7 +17,6 @@ import { BookFormComponent } from './book-form/book-form.component';
     AppComponent,
     BookListComponent,
     NewUserComponent,
-    BookListComponent,
     BookFormComponent
   ],
   imports: [

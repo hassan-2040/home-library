@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../book';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-book-form',
@@ -7,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookFormComponent implements OnInit {
 
-  constructor() { }
+  model = new Book('');
+
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    alert("submitted");
+    this.bookService
+      .save(this.model)
+      .subscribe(response => console.log(response));
   }
 
 }
